@@ -1,0 +1,47 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+<form>
+    <button name="chooseMarquee" id="chooseMarquee">MARQUEE</button>
+    <button name="chooseFinger" id="chooseFinger">FINGER</button>
+    <button name="chooseTravelingBall" id="chooseTravelingBall">TRAVELING BALL</button>
+</form>
+
+{{> templateChanger}}
+{{> video}}
+</body>
+
+<template name="templateChanger">
+    <!--{{> marqueeView}}-->
+    <!--{{> fingerView}}-->
+    {{> travelingBallView}}
+    <!--{{#if marqueeOption}}-->
+        <!--{{> marqueeView}}-->
+         <!--{{else}}-->
+            <!--{{#if fingerOption}}-->
+                <!--{{> fingerView}}-->
+                  <!--{{else}}-->
+                    <!--{{#if travelingBallOption}}-->
+                    <!--{{> travelingBallView}}-->
+                        <!--{{/if}}-->
+            <!--{{/if}}-->
+      <!--{{/if}}-->
+</template>
+
+<template name="video">
+    <video id="video" controls autoplay>
+        <source src="HotTubStargazing.mp4" type="video/mp4" >
+    </video>
+</template>
+
+<template name="marqueeView">
+    <svg id="snapsvg1"></svg>
+</template>
+<template name="fingerView">
+    <svg id="snapsvg2"></svg>
+</template>
+<template name="travelingBallView">
+    <svg id="snapsvg3"></svg>
+</template>
