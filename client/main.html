@@ -15,24 +15,14 @@
 
 <template name="templateChanger">
     <!--{{> marqueeView}}-->
-    <!--{{> fingerView}}-->
-    {{> travelingBallView}}
-    <!--{{#if marqueeOption}}-->
-        <!--{{> marqueeView}}-->
-         <!--{{else}}-->
-            <!--{{#if fingerOption}}-->
-                <!--{{> fingerView}}-->
-                  <!--{{else}}-->
-                    <!--{{#if travelingBallOption}}-->
-                    <!--{{> travelingBallView}}-->
-                        <!--{{/if}}-->
-            <!--{{/if}}-->
-      <!--{{/if}}-->
+    {{> fingerView}}
+    <!--{{> travelingBallView}}-->
+
 </template>
 
 <template name="video">
-    <video id="video" controls autoplay>
-        <source src="HotTubStargazing.mp4" type="video/mp4" >
+  
+    <video id="video" controls="controls" autoplay="autoplay" src="" width="2000px" >
     </video>
 </template>
 

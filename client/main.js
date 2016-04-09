@@ -70,8 +70,8 @@ Template.templateChanger.helpers({
 });
 
 Template.video.onRendered(function(){
-  $("#video").attr('width',window.innerWidth+'px');
-  $("#video").attr('preserveAspectRatio',1);
+  //$("#video").attr('width',window.innerWidth+'px');
+  //$("#video").attr('preserveAspectRatio',1);
   //$("#video").attr('autoplay', 'autoplay');
 
 });
@@ -490,7 +490,10 @@ Template.fingerView.onRendered(function(){
   fingerRect.attr({
     fill:'lightgray'
   });
-  //var fingerTip = s.circle(initialX+fingerWidth-fingerWidth/2,initialY,20);
+  var fingerTip = s.circle(initialX+fingerWidth-10,initialY+50,50);
+  fingerTip.attr({
+    fill:'lightgray'
+  });
   var headline = s.multitext(initialX+50,parseInt(initialY+20), "JetBlue continues to be the best airline out \n- love those chips!");
   headline.attr({
     fontFamily:'Helvetica',
@@ -510,7 +513,7 @@ Template.fingerView.onRendered(function(){
 
   var link = s.text(-100,parseInt(initialY+90), 'READ ME');
 
-  var bannerGroup = s.group(fingerRect,headline, author, image, link);
+  var bannerGroup = s.group(fingerRect,fingerTip,headline, author, image, link);
   function animateMarquee(){
     console.log("ani");
     //highlight context tab:
@@ -604,8 +607,8 @@ function renderVid(){
   var vid = document.createElement('video');
   vid.setAttribute('width','2000px');
   vid.setAttribute('height', "1300px");
-  vid.setAttribute('src', 'doop.webm');
-  vid.setAttribute('id','video');
+  //vid.setAttribute('src', 'doop.webm');
+  //vid.setAttribute('id','video');
   $('body').append($(vid));
 }
 
